@@ -8,7 +8,10 @@ export default function Home() {
       <main>
         <Container>
           <GridLayout>
-            <LeftColumn />
+            <LeftColumn
+              title="We build outstanding brands"
+              subtitle="We build state-of-the-art fashion, lifestyle, luxury eCommerce stores on Shopify & Shopify Plus by bridging the gap between branding and conversion."
+            />
             <RightColumn />
           </GridLayout>
         </Container>

@@ -4,6 +4,7 @@ import LanguageSelector from './LanguageSelector';
 import BrandingSwitcher from './BrandingSwitcher';
 import Link from 'next/link';
 import Footer from './Footer';
+import Logo from './UI/Logo';
 
 export const LeftColumnWrapper = styled(Column)`
   position: sticky;
@@ -45,13 +46,6 @@ const ColumnHeader = styled.header`
     }
   }
 
-  h1 {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: ${({ theme }) => theme.fontWeight.medium};
-    letter-spacing: -0.01em;
-  }
-
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     justify-content: space-between;
   }
@@ -88,23 +82,22 @@ const ColumnMain = styled.div`
   }
 `;
 
-const LeftColumn = () => {
+interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const LeftColumn = ({ title, subtitle }: Props) => {
   return (
     <LeftColumnWrapper>
       <ColumnHeader>
-        <h1>
-          <Link href="/">Agency</Link>
-        </h1>
+        <Logo />
         <LanguageSelector />
         <BrandingSwitcher />
       </ColumnHeader>
       <ColumnMain>
-        <h2>We build outstanding brands.</h2>
-        <p>
-          We craft outstanding direct-to-consumer brands with the common ambition to offer true
-          craftsmanship, timeless products that are carbon neutral – and this without ever making
-          any concessions.
-        </p>
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
       </ColumnMain>
       <Footer />
     </LeftColumnWrapper>
