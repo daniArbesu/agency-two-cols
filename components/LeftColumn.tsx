@@ -3,6 +3,7 @@ import { Column } from '../styles/sharedstyles';
 import LanguageSelector from './LanguageSelector';
 import BrandingSwitcher from './BrandingSwitcher';
 import Link from 'next/link';
+import Footer from './Footer';
 
 export const LeftColumnWrapper = styled(Column)`
   position: sticky;
@@ -16,6 +17,10 @@ export const LeftColumnWrapper = styled(Column)`
     position: relative;
     height: auto;
     gap: 2rem;
+
+    footer {
+      display: none;
+    }
   }
 `;
 
@@ -83,23 +88,6 @@ const ColumnMain = styled.div`
   }
 `;
 
-const ColumnFooter = styled.footer`
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 14px;
-  line-height: 1.6;
-  letter-spacing: -0.01em;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    display: none;
-  }
-
-  span {
-    opacity: 0.5;
-  }
-`;
-
 const LeftColumn = () => {
   return (
     <LeftColumnWrapper>
@@ -118,10 +106,7 @@ const LeftColumn = () => {
           any concessions.
         </p>
       </ColumnMain>
-      <ColumnFooter>
-        <p>© Agency, All rights reserved</p>
-        <span>‍No cookie Policy. No privacy policy.</span>
-      </ColumnFooter>
+      <Footer />
     </LeftColumnWrapper>
   );
 };

@@ -4,11 +4,23 @@ import WorkCard from './WorkCard';
 import { featuredWorkEvents } from '../utils/featuredWorkEvents';
 import LanguageSelector from './LanguageSelector';
 import BrandingSwitcher from './BrandingSwitcher';
+import FeaturedClients from './FeaturedClients';
+import Footer from './Footer';
 
 const RightColumnWrapper = styled(Column)`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 40px;
+
+  footer {
+    display: none;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    footer {
+      display: block;
+    }
+  }
 `;
 
 const ColumnHeader = styled.header`
@@ -38,15 +50,12 @@ const RightColumn = () => {
       <FeaturedWork>
         {featuredWorkEvents.map(({ id, title, description, img, link }) => (
           <li key={id}>
-            <WorkCard
-              link={link}
-              title={title}
-              description={description}
-              img={img}
-            />
+            <WorkCard link={link} title={title} description={description} img={img} />
           </li>
         ))}
       </FeaturedWork>
+      <FeaturedClients />
+      <Footer />
     </RightColumnWrapper>
   );
 };

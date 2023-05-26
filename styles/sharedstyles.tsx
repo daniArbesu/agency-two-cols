@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin: 0 auto;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 0 32px;
+    padding: 0 20px;
   }
 `;
 
