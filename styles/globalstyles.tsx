@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: ${({ theme }) => theme.color.primary};
     min-height: 100%;
-    font-family: 'Roboto', sans-serif;
     font-weight: ${({ theme }) => theme.fontWeight.medium};
   }
 
