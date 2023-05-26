@@ -6,6 +6,7 @@ import LanguageSelector from './LanguageSelector';
 import BrandingSwitcher from './BrandingSwitcher';
 import FeaturedClients from './FeaturedClients';
 import Footer from './Footer';
+import FeaturedNumbers from './FeaturedNumbers';
 
 const RightColumnWrapper = styled(Column)`
   display: flex;
@@ -55,6 +56,7 @@ const RightColumn = () => {
         ))}
       </FeaturedWork>
       <FeaturedClients />
+      <FeaturedNumbers />
       <Footer />
     </RightColumnWrapper>
   );

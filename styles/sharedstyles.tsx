@@ -25,3 +25,21 @@ export const GridLayout = styled.div`
 export const Column = styled.section`
   padding: 32px 0;
 `;
+
+export const SectionWrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 54px;
+  gap: 32px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #d6d6d6;
+  border-radius: 20px;
+
+  h2 {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
+  }
+`;
