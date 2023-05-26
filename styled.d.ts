@@ -1,10 +1,22 @@
-import 'styled-components'
+import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    colors: {
-      primary: string
-      secondary: string
-    }
+    color: {
+      background: string;
+      primary: string;
+    };
+    fontWeight: {
+      light: number;
+      regular: number;
+      medium: number;
+      bold: number;
+    };
+    breakpoints: {
+      phone: string;
+      tablet: string;
+      desktop: string;
+      LgDesktop: string;
+    };
   }
 }
