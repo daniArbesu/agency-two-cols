@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { Column } from '../styles/sharedstyles';
 import WorkCard from './WorkCard';
 import { featuredWorkEvents } from '../utils/featuredWorkEvents';
+import LanguageSelector from './LanguageSelector';
+import BrandingSwitcher from './BrandingSwitcher';
 
 const RightColumnWrapper = styled(Column)`
   display: flex;
@@ -20,42 +22,6 @@ const ColumnHeader = styled.header`
   }
 `;
 
-const LanguageSelector = styled.div`
-  font-size: 13px;
-
-  a {
-    padding: 6px 12px;
-    opacity: 0.5;
-
-    &.active {
-      opacity: 1;
-    }
-  }
-`;
-
-const BrandingSwitcher = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 2px;
-  padding: 4px;
-  font-size: 13px;
-  line-height: 1.2;
-  border-radius: 200px;
-  background-color: #dadada66;
-  backdrop-filter: blur(4px);
-
-  a {
-    padding: 6px 11px;
-    border-radius: 20px;
-    transition: 200ms;
-
-    &.active {
-      background-color: ${({ theme }) => theme.color.primary};
-      color: ${({ theme }) => theme.color.background};
-    }
-  }
-`;
-
 const FeaturedWork = styled.ul`
   display: flex;
   flex-direction: column;
@@ -66,18 +32,8 @@ const RightColumn = () => {
   return (
     <RightColumnWrapper>
       <ColumnHeader>
-        <LanguageSelector>
-          <a href="/" className="active">
-            EN
-          </a>
-          | <a href="/">ES</a>
-        </LanguageSelector>
-        <BrandingSwitcher>
-          <a href="/" className="active">
-            Events
-          </a>
-          <a href="/branding">Branding</a>
-        </BrandingSwitcher>
+        <LanguageSelector />
+        <BrandingSwitcher />
       </ColumnHeader>
       <FeaturedWork>
         {featuredWorkEvents.map(({ id, title, description, img, link }) => (

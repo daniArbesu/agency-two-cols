@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Column } from '../styles/sharedstyles';
+import LanguageSelector from './LanguageSelector';
+import BrandingSwitcher from './BrandingSwitcher';
 
 export const LeftColumnWrapper = styled(Column)`
   position: sticky;
@@ -19,6 +21,23 @@ export const LeftColumnWrapper = styled(Column)`
 const ColumnHeader = styled.header`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  .language-selector {
+    display: none;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      display: block;
+    }
+  }
+
+  .branding-switcher {
+    display: none;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      display: block;
+    }
+  }
 
   h1 {
     font-size: 24px;
@@ -87,6 +106,8 @@ const LeftColumn = () => {
         <h1>
           <a href="/">Agency</a>
         </h1>
+        <LanguageSelector />
+        <BrandingSwitcher />
       </ColumnHeader>
       <ColumnMain>
         <h2>We build outstanding brands.</h2>
