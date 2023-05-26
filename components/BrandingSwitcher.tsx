@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 const BrandingSwitcherWrapper = styled.div`
@@ -24,13 +25,27 @@ const BrandingSwitcherWrapper = styled.div`
   }
 `;
 
+const routes = [
+  {
+    name: 'Events',
+    path: '/'
+  },
+  {
+    name: 'Branding',
+    path: '/branding'
+  }
+];
+
 const BrandingSwitcher = () => {
+  const { asPath } = useRouter();
+
   return (
     <BrandingSwitcherWrapper className="branding-switcher">
-      <Link href="/" className="active">
-        Events
-      </Link>
-      <Link href="/branding">Branding</Link>
+      {routes.map(({ name, path }, index) => (
+        <Link href={path} className={asPath === path ? 'active' : ''} key={index}>
+          {name}
+        </Link>
+      ))}
     </BrandingSwitcherWrapper>
   );
 };

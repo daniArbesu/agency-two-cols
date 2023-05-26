@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Column } from '../styles/sharedstyles';
 import LanguageSelector from './LanguageSelector';
 import BrandingSwitcher from './BrandingSwitcher';
-import Link from 'next/link';
 import Footer from './Footer';
 import Logo from './UI/Logo';
 
