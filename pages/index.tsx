@@ -9,7 +9,7 @@ export default function Home() {
         <Container>
           <GridLayout>
             <LeftColumn
-              title="We build outstanding brands"
+              title="The Design for your event"
               subtitle="We build state-of-the-art fashion, lifestyle, luxury eCommerce stores on Shopify & Shopify Plus by bridging the gap between branding and conversion."
             />
             <RightColumn />

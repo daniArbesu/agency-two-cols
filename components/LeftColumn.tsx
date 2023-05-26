@@ -41,7 +41,7 @@ const ColumnHeader = styled.header`
     display: none;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-      display: block;
+      display: flex;
     }
   }
 
