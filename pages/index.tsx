@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { Container, GridLayout } from '../styles/sharedstyles';
 import LeftColumn from '../components/LeftColumn';
 import RightColumn from '../components/RightColumn';

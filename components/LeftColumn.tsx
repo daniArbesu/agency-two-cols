@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Column } from '../styles/sharedstyles';
 import LanguageSelector from './LanguageSelector';
 import BrandingSwitcher from './BrandingSwitcher';
+import Link from 'next/link';
 
 export const LeftColumnWrapper = styled(Column)`
   position: sticky;
@@ -104,7 +105,7 @@ const LeftColumn = () => {
     <LeftColumnWrapper>
       <ColumnHeader>
         <h1>
-          <a href="/">Agency</a>
+          <Link href="/">Agency</Link>
         </h1>
         <LanguageSelector />
         <BrandingSwitcher />
@@ -112,9 +113,9 @@ const LeftColumn = () => {
       <ColumnMain>
         <h2>We build outstanding brands.</h2>
         <p>
-          We craft outstanding direct-to-consumer brands with the common
-          ambition to offer true craftsmanship, timeless products that are
-          carbon neutral – and this without ever making any concessions.
+          We craft outstanding direct-to-consumer brands with the common ambition to offer true
+          craftsmanship, timeless products that are carbon neutral – and this without ever making
+          any concessions.
         </p>
       </ColumnMain>
       <ColumnFooter>

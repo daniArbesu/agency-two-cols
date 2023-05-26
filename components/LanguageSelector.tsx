@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const LanguageSelectorWrapper = styled.div`
@@ -16,10 +17,10 @@ const LanguageSelectorWrapper = styled.div`
 const LanguageSelector = () => {
   return (
     <LanguageSelectorWrapper className="language-selector">
-      <a href="/" className="active">
+      <Link href="/" className="active">
         EN
-      </a>
-      | <a href="/">ES</a>
+      </Link>
+      | <Link href="/">ES</Link>
     </LanguageSelectorWrapper>
   );
 };

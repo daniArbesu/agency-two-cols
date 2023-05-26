@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import RightArrow from './RightArrow';
+import Image from 'next/image';
 
 const CardArrowWrapper = styled.div`
   position: absolute;
@@ -85,7 +86,14 @@ const CardImageWrapper = styled.div`
   }
 `;
 
-const WorkCard = ({ link, title, description, img }) => {
+interface Props {
+  link: string;
+  title: string;
+  description: string;
+  img: string;
+}
+
+const WorkCard = ({ link, title, description, img }: Props) => {
   return (
     <CardWrapper className="card-article">
       <a href={link}>
@@ -94,7 +102,7 @@ const WorkCard = ({ link, title, description, img }) => {
           <p className="cardInfo__description">{description}</p>
         </CardInfo>
         <CardImageWrapper>
-          <img src={img} alt={title} />
+          <Image src={img} alt={title} fill />
         </CardImageWrapper>
         <CardArrowWrapper>
           <RightArrow />

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const BrandingSwitcherWrapper = styled.div`
@@ -26,10 +27,10 @@ const BrandingSwitcherWrapper = styled.div`
 const BrandingSwitcher = () => {
   return (
     <BrandingSwitcherWrapper className="branding-switcher">
-      <a href="/" className="active">
+      <Link href="/" className="active">
         Events
-      </a>
-      <a href="/branding">Branding</a>
+      </Link>
+      <Link href="/branding">Branding</Link>
     </BrandingSwitcherWrapper>
   );
 };
