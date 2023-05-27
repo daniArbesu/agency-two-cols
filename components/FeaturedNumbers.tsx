@@ -20,12 +20,13 @@ const NumbersWrapper = styled.div`
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 32px;
   grid-row-gap: 32px;
+  width: 100%;
 `;
 
 const FactWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 12px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 

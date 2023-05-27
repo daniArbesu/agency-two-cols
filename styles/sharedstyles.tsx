@@ -37,6 +37,11 @@ export const SectionWrapper = styled.section`
   border: 1px solid #d6d6d6;
   border-radius: 20px;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+    padding: 40px 16px;
+    border-radius: 32px;
+  }
+
   h2 {
     font-size: 16px;
     line-height: 1.2;
